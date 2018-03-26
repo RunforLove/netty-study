@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EclipseCodeFormatterProjectSettings">
+    <option name="selectedGlobalProfile">
+      <Settings>
+        <option name="disabledFileTypes" value="$PROJECT_DIR$/../../codeformat/codetemplates.xml" />
+        <option name="formatter" value="ECLIPSE" />
+        <option name="id" value="1476944925601" />
+        <option name="importOrderConfigFilePath" value="$PROJECT_DIR$/../../codeformat/codeformat.xml" />
+        <option name="importOrderFromFile" value="true" />
+        <option name="name" value="default" />
+        <option name="pathToConfigFileJava" value="$PROJECT_DIR$/../../codeformat/codeformat.xml" />
+        <option name="selectedJavaProfile" value="alibaba-cn-format" />
+        <option name="useForLiveTemplates" value="true" />
+      </Settings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/netty-demo.iml" filepath="$PROJECT_DIR$/netty-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-demo-client/netty-demo-client.iml" filepath="$PROJECT_DIR$/netty-demo-client/netty-demo-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-demo-server/netty-demo-server.iml" filepath="$PROJECT_DIR$/netty-demo-server/netty-demo-server.iml" />
+    </modules>
+  </component>
+</project>
