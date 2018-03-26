@@ -9,7 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 public class MyClientHandler extends ChannelInboundHandlerAdapter{
 
     /**
-     * 读取服务端的信息
+     * 读取服务端的信息;
+     * 【有数据可以读取的时候触发】
      *
      * @param ctx
      * @param msg
@@ -35,11 +36,15 @@ public class MyClientHandler extends ChannelInboundHandlerAdapter{
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception{
-        log.info("MyClientHandler.channelActive");
+        log.info("MyClientHandler.channelActive 与服务端连接建立");
         String msg = "Are you ok?";
+
+        // 申请一块缓存(buffer)写入数据
         ByteBuf encoded = ctx.alloc().buffer(4 * msg.length());
         encoded.writeBytes(msg.getBytes());
 
+        // 将buf保存到ChannelOutboundBuffer中
+        // 将ChannelOutboundBuffer中的buf输出到socketChannel中
         ctx.write(encoded);
         ctx.flush();
     }
