@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Value;
 
 import java.net.InetSocketAddress;
 
-import javax.annotation.Resource;
-
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
