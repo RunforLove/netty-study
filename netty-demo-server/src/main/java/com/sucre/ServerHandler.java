@@ -21,7 +21,6 @@ public class ServerHandler {
 
     @Value("${server.port:8080}")
     private int serverPort;
-
     public void start(int port) throws Exception{
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -32,7 +31,7 @@ public class ServerHandler {
                     .channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .localAddress(new InetSocketAddress(serverPort))
-                    .handler(new LoggingHandler(LogLevel.INFO))
+                    .handler(new LoggingHandler(LogLevel.DEBUG))
                     .childHandler(new MyHandler())
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture future = bootstrap.bind(port).sync();
