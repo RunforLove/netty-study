@@ -1,4 +1,4 @@
-package com.sucre.JDKNioChannle;
+package com.sucre.channel;
 
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
@@ -15,10 +15,17 @@ public class NioChannelTest1 {
          * rw 读写模式
          */
         RandomAccessFile file = new RandomAccessFile("/Users/shuanghun/diancan.sh", "rw");
+
+        /**
+         * FileChannel是操作文件的Channel，我们可以通过FileChannel从一个文件中读取数据,也可以将数据写入到文件中
+         */
         FileChannel inChannel = file.getChannel();
 
         ByteBuffer byteBuffer = ByteBuffer.allocate(48);
 
+        /**
+         * 从FileChannel中读取数据
+         */
         int bytesRead = inChannel.read(byteBuffer);
 
         /**
@@ -51,7 +58,7 @@ public class NioChannelTest1 {
             bytesRead = inChannel.read(byteBuffer);
         }
 
-        // 关闭文件读取
+        // FileChannle操作完成后,必须将其关闭;
         file.close();
     }
 }
